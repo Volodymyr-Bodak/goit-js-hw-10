@@ -24,6 +24,7 @@ selectBtn.addEventListener('change', () => {
   
   fetchCatByBreed(selectBtn.value)
   .then(cats => {
+    document.querySelector('p.error').style.display = 'none';
     cats.forEach(info => {
       loader.classList.add('hidden');
       const img = document.querySelector('img');
